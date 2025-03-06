@@ -1,0 +1,107 @@
+.App {
+  font-family: sans-serif;
+}
+
+.va {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  font-size: 20px;
+  color: orange;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: blue;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.auth-buttons button {
+  padding: 8px 15px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  justify-content: space-between;
+  font-size: 30px;
+}
+.wb {
+  margin-left: 150px;
+}
+.wb p {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.wb button {
+  margin-top: 50px;
+  width: auto;
+  width: 150px;
+  height: 50px;
+}
+.small-img {
+  width: 150px;
+  height: auto;
+  margin-left: 10px;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1;
+}
+
+.btn button {
+  color: white;
+  background-color: rgb(252, 165, 4);
+  border-radius: 15px;
+}
+.page-break {
+  border: none;
+  height: 2px;
+  background-color: gray;
+  margin: 40px 0;
+}
+.lt {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 100%;
+}
+.st {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+}
