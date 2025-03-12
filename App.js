@@ -1,8 +1,50 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
+import Gallery from "./components/Gallery";
+import Collection from "./components/Collection";
+import About from "./components/About";
 
 const App = () => (
-  <div className="App">
-    <Header />
+  <Router>
+    <div className="App">
+      <Header />
+      <MainContent />
+      <Footer />
+    </div>
+  </Router>
+);
+
+const Header = () => (
+  <div className="va">
+    <p className="logo">Visual Arts</p>
+    <nav className="nav-links">
+      <Link to="/">Home</Link>
+      <Link to="/gallery">Gallery</Link>
+      <Link to="/about">About Us</Link>
+      <Link to="/collection">Collection</Link>
+    </nav>
+    <div className="auth-buttons">
+      <button>Login</button>
+      <button>Sign up</button>
+    </div>
+  </div>
+);
+
+const MainContent = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/collection" element={<Collection />} />
+      </Routes>
+    </div>
+  );
+};
+
+const Home = () => (
+  <>
     <Body />
     <PageBreak />
     <Middle />
@@ -12,24 +54,9 @@ const App = () => (
     <Final />
     <Teams />
     <PageBreak />
-    <Footer />
-  </div>
+  </>
 );
 
-const Header = () => (
-  <div className="va">
-    <p className="logo">Visual Arts</p>
-    <nav className="nav-links">
-      {['Home', 'Gallery', 'About Us', 'Collection'].map(link => (
-        <a href={link} key={link}>{link}</a>
-      ))}
-    </nav>
-    <div className="auth-buttons">
-      <button>Login</button>
-      <button>Sign up</button>
-    </div>
-  </div>
-);
 
 const Body = () => (
   <div className="whole">
@@ -66,23 +93,23 @@ const Cards = () => {
   const cardData = [
     {
       img: "https://i.pinimg.com/736x/21/a7/8e/21a78ee8b3c3940bafa81a4e6dc6a4f3.jpg",
-      title: "Art Name",
+      title: "Abstract Art",
       description: "Explore the depth of abstract creativity."
     },
     {
       img: "https://i.pinimg.com/736x/1e/65/0e/1e650e820b09c5b302c0994d104f1c1e.jpg",
-      title: "Art Name",
+      title: "3D Art",
       description: "Discover innovative 3D art pieces."
     },
     {
       img: "https://i.pinimg.com/736x/52/f2/f5/52f2f5a78069636a49bfa47a3959611f.jpg",
-      title: "Art Name",
-      description: ""
+      title: "Minimalist Design",
+      description: "Simplicity in art speaks volumes."
     },
     {
       img: "https://i.pinimg.com/736x/03/c3/a0/03c3a0a566c64d324f351265cbe22fe6.jpg",
-      title: "Art Name",
-      description: ""
+      title: "Modern Art",
+      description: "Experience cutting-edge modern art."
     }
   ];
 
