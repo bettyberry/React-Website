@@ -200,13 +200,63 @@ h1 {
   width: 100%;
 }
 .About-content{
-  padding-top: 200px;
+  padding-top: 100px;
+  padding-left: 700px;
   margin-left: 100px;  
   color: orange;  
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
 
 
 }
+img {
+  width: auto; 
+  margin-top: 80px; 
+}
+.about-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    color: #222;
+    line-height: 2;
+    
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .about-container {
+    animation: slideIn 1.5s ease-out;
+  }
+  
+
+.about-container img {
+  width: 30%; 
+  margin-left: 100px;
+  height: auto;
+}
+
+.about-content {
+  width: 55%; 
+  font-size: 18px;
+  text-align: left;
+}
+.about-content h2{
+  margin-left: 200px;
+  color: orange;
+}
+
+
 .Collection-content {
   display: flex;
   justify-content: center;
@@ -214,4 +264,28 @@ h1 {
   height: 300px;    
   color: orange;  
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;     
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.about-content h2{
+  font-size: 24px;
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
 }
